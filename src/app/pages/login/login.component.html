@@ -1,16 +1,19 @@
-<div class="container" *ngIf="exibir">
-  <form>
+<div class="container">
+  <form [formGroup]="formularioLogin">
     <div class="form-group">
       <label for="txtEmail">Email</label>
-      <input type="email" class="form-control" id="txtEmail">
+      <input type="email" class="form-control" id="txtEmail" formControlName="email" >
     </div>
     <div class="form-group">
       <label for="txtSenha">Senha</label>
-      <input type="password" class="form-control" id="txtSenha">
+      <input type="password" class="form-control" id="txtSenha" formControlName="senha" >
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+      <button class="btn btn-primary" type="button" (click)="submitLogin()">Login</button>
       <button type="button" class="btn btn-secondary" (click)="registro()">Registre-se</button>
     </div>
   </form>
 </div>
+
+<form >
+</form>
