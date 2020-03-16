@@ -1,0 +1,28 @@
+ <div class="container">
+  
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="comboEspecialidade">Especialidades</label>
+    <select class="custom-select" id="comboEspecialidade" (change)="onComboEsepecialidadeChange($event.target.value)">
+      <option selected>Choose...</option>
+      <option *ngFor="let especialidade of especialidades; let i = index" value="{{especialidade.codigo}}">{{especialidade.descricao}}</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="input-group-prepend" *ngIf="comboEspecialidadeClicked">
+    <label class="input-group-text" for="comboMedico">Médico</label>
+    <select class="custom-select" id="comboMedico" (change)="onComboMedicoChange($event.target.value)">
+      <option selected>Choose...</option>
+      <option *ngFor="let medico of medicos; let i = index" value="{{medico.crm}}">{{medico.nome}}</option>
+    </select>
+  </div>
+  <br>
+
+    <div class="input-group-prepend" *ngIf="comboMedicoClicked">
+    <label class="input-group-text" for="comboMedico">Dia</label>
+    <select class="custom-select" id="comboMedico">
+      <option selected>Choose...</option>
+      <option *ngFor="let atendimento of atendimentos; let i = index" value="{{atendimento.id}}">{{atendimento.horario}}</option>      
+    </select>
+  </div>
+</div>

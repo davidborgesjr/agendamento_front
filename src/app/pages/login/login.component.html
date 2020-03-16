@@ -1,0 +1,16 @@
+<div class="container" *ngIf="exibir">
+  <form>
+    <div class="form-group">
+      <label for="txtEmail">Email</label>
+      <input type="email" class="form-control" id="txtEmail">
+    </div>
+    <div class="form-group">
+      <label for="txtSenha">Senha</label>
+      <input type="password" class="form-control" id="txtSenha">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+      <button type="button" class="btn btn-secondary" (click)="registro()">Registre-se</button>
+    </div>
+  </form>
+</div>
